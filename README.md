@@ -34,20 +34,13 @@ cd team-profile-generator
 ### Once complete, run the program in the terminal:
 
 ```
-git clone git@github.com:Amalidi/team-profile-generator.git
-cd team-profile-generator
-```
-
-### Once complete, run the program in the terminal:
-
-```
 npm run start
 ```
 
 ### To Tests
 
 ```
-npm run test:watch
+npm run test
 ```
 
 ## Walkthrough
