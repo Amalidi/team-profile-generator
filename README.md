@@ -10,7 +10,7 @@
 
 ## Description
 
-This application uses the inquirer node.js package which allows a manager to create a team profile using the information about employees on a software engineering team, and with that information generates an HTML webpage that displays the users input data. The app presents users with a series of prompted questions regarding the their team in the terminal.
+This application uses the inquirer node.js package which allows a manager to create a team profile using the information about employees on a software engineering team, and with that information generates an HTML webpage that displays the users input data. The app presents users with a series of prompted questions regarding their team in the terminal.
 Additionally to make the code maintainable the application uses Jest and Inquirer to conduct unit tests and ensure all tests pass
 
 ## User Story 🧍
