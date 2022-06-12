@@ -27,24 +27,24 @@ so that I have quick access to emails and GitHub profiles
 ### Installation
 
 ```
-git clone https://github.com/natasha-mann/team-profile-generator.git
+git clone git@github.com:Amalidi/team-profile-generator.git
 cd team-profile-generator
-npm i
 ```
 
-### Launch the app
+### Once complete, run the program in the terminal:
+
+```
+git clone git@github.com:Amalidi/team-profile-generator.git
+cd team-profile-generator
+```
+
+### Once complete, run the program in the terminal:
 
 ```
 npm run start
 ```
 
-### Tests with Coverage
-
-```
-npm run test
-```
-
-### Tests with Watch Mode
+### To Tests
 
 ```
 npm run test:watch
