@@ -7,16 +7,23 @@ const Manager = require("./lib/Manager");
 const Employee = require("./lib/Employee");
 const Intern = require("./lib/Intern");
 const Engineer = require("./lib/Engineer");
+const getAnswers = require("./utils/getAnswers");
 
-// add the questions
+// ask the file and team name
 const teamQuestions = [
   {
     type: "input",
     name: "teamName",
     message: "Enter your team name?",
   },
+  {
+    type: "input",
+    name: "fileName",
+    message: "Enter a name for your HTML file?",
+  },
 ];
 
+// questions for the manager
 const managerQuestions = [
   {
     name: "name",
@@ -40,28 +47,30 @@ const managerQuestions = [
   },
 ];
 
-const differentRoleQuestion = [
+// an option to select a different employee
+const employeeTypeQuestion = [
   {
-    name: "differentRole",
+    name: "employeeType",
     type: "list",
     message: "Select a team member you would like to add next?",
     choices: [
       {
-        name: "Engineer",
+        Key: "Engineer",
         value: "engineer",
       },
       {
-        name: "Intern",
+        Key: "Intern",
         value: "intern",
       },
       {
-        name: "None",
+        Key: "None",
         value: "None",
       },
     ],
   },
 ];
 
+// questions for the engineer
 const engineerQuestions = [
   {
     name: "name",
@@ -85,6 +94,7 @@ const engineerQuestions = [
   },
 ];
 
+// questions for the intern
 const internQuestions = [
   {
     name: "name",
@@ -108,7 +118,47 @@ const internQuestions = [
   },
 ];
 
+const getAllTeamMembers = async () => {
+  // team object array
+  const teamMembers = [];
+
+  let loopVariable = true;
+  while (loopVariable) {
+    // OPTION QUESTION presented and ON LOOP CHECK
+    const { employeeType } = await getAnswers(employeeTypeQuestion);
+
+    // using if statement
+    if (employeeType === "engineer") {
+      // start the engineer question
+      const CreateEngineer = await getAnswers(engineerQuestions);
+      const engineer = new Engineer(CreateEngineer);
+      // save it in an array
+      teamMembers.push(engineer);
+
+      // start the intern questions
+    } else if (employeeType === "intern") {
+      const createIntern = await getAnswers(internQuestions);
+      const intern = new Intern(createIntern);
+      // save it in an array
+      teamMembers.push(intern);
+    } else {
+      loopVariable = false;
+    }
+  }
+  return teamMembers;
+};
+
+// main function to start
 const init = async () => {
   console.log("Application");
+
+  // ask for file and team name
+  const { teamName, fileName } = await getAnswers(teamQuestions);
+
+  // start the manager questions
+  const manager = await getAnswers(managerQuestions);
+
+  // generated HTML file
+  console.log("Your html file has been created successfully");
 };
 init();
