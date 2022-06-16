@@ -167,9 +167,9 @@ const init = async () => {
   // generated HTML file
   const newHtmlPage = generateHtml({
     fileName,
-    teamName,
-    manager,
     allTeamMembers,
+    manager,
+    teamName,
   });
 
   // HTML file rendered
