@@ -173,7 +173,7 @@ const init = async () => {
   });
 
   // HTML file rendered
-  writeToFile(fileName, newHtmlPage);
+  writeToFile(newHtmlPage, fileName);
   console.log("Your html file has been created successfully");
 };
 init();
