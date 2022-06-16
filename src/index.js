@@ -7,7 +7,9 @@ const Manager = require("./lib/Manager");
 const Employee = require("./lib/Employee");
 const Intern = require("./lib/Intern");
 const Engineer = require("./lib/Engineer");
+const generateHtml = require("./utils/generateHtml");
 const getAnswers = require("./utils/getAnswers");
+const writeToFile = require("./utils/writeToFile");
 
 // ask the file and team name
 const teamQuestions = [
@@ -156,9 +158,22 @@ const init = async () => {
   const { teamName, fileName } = await getAnswers(teamQuestions);
 
   // start the manager questions
-  const manager = await getAnswers(managerQuestions);
+  const CreateManger = await getAnswers(managerQuestions);
+  const manager = new Manager(CreateManger);
+
+  const allTeamMembers = await getAllTeamMembers();
+  // console.log({ teamName, fileName, manager, allTeamMembers });
 
   // generated HTML file
+  const newHtmlPage = generateHtml({
+    fileName,
+    teamName,
+    manager,
+    allTeamMembers,
+  });
+
+  // HTML file rendered
+  writeToFile(fileName, newHtmlPage);
   console.log("Your html file has been created successfully");
 };
 init();
