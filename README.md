@@ -49,11 +49,11 @@ Please click [here]() to view the demo of the application.
 
 ## Screenshot
 
-Image of the project:
+### An Image of the project:
 
 ![Image of the project](./dist/assets/images/htmlimage.png)
 
-Image of the tests:
+### An Image of the tests:
 
 ![Image of the project](./dist/assets/images/testsimage.png)
 
