@@ -6,6 +6,7 @@
 - [User Story](#user-story-🧍)
 - [Getting Started](#getting-started-🚀)
 - [Walkthrough](#walkthrough)
+- [Screenshots](#screenshots)
 - [Questions](#questions)
 
 ## Description
@@ -47,7 +48,7 @@ npm run test
 
 Please click [here]() to view the demo of the application.
 
-## Screenshot
+## Screenshots
 
 ### An Image of the project:
 
