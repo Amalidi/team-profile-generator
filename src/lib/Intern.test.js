@@ -1,4 +1,4 @@
-const Intern = require("../lib/Intern.js");
+const Intern = require("./Intern");
 
 describe("Intern", () => {
   const name = "Amal Idiris";

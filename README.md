@@ -47,6 +47,16 @@ npm run test
 
 Please click [here]() to view the demo of the application.
 
+## Screenshot
+
+Image of the project:
+
+![Image of the project](./dist/assets/images/htmlimage.png)
+
+Image of the tests:
+
+![Image of the project](./dist/assets/images/testsimage.png)
+
 ## Questions
 
 If you have any questions about this application, please contact me by [email](mailto:A.idi12@outlook.com).

@@ -1,4 +1,4 @@
-const Manager = require("../lib/Manager.js");
+const Manager = require("./Manager");
 
 describe("Manager", () => {
   const name = "Amal Idiris";
