@@ -1,16 +1,18 @@
 const fs = require("fs");
 
-const path = require("path");
+const writeToFile = (fileName, generatedHTML) => {
+  const dir = "./dist";
+  if (!fs.existsSync(dir)) {
+    fs.mkdirSync(dir, {
+      recursive: true,
+    });
+  }
 
-const generateHtml = require("./generateHtml");
+  const callback = (html) => {
+    console.log("Your html file has been created successfully");
+  };
 
-const writeToFile = (fileName, generateHtml) => {
-  const filePath = path.join(__dirname, `../../dist/${fileName}.html`);
-  console.log(filePath);
-
-  console.log("Your team profile file has been generated!");
-
-  fs.writeFileSync(filePath, JSON.stringify(generateHtml));
+  fs.writeFile(`./dist/${fileName}.html`, generatedHTML, callback);
 };
 
 // export the module

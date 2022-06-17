@@ -4,7 +4,7 @@ const fs = require("fs");
 
 // import all the classes
 const Manager = require("./lib/Manager");
-const Employee = require("./lib/Employee");
+// const Employee = require("./lib/Employee");
 const Intern = require("./lib/Intern");
 const Engineer = require("./lib/Engineer");
 const generateHtml = require("./utils/generateHtml");
@@ -152,8 +152,6 @@ const getAllTeamMembers = async () => {
 
 // main function to start
 const init = async () => {
-  console.log("Application");
-
   // ask for file and team name
   const { teamName, fileName } = await getAnswers(teamQuestions);
 
@@ -162,18 +160,10 @@ const init = async () => {
   const manager = new Manager(CreateManger);
 
   const allTeamMembers = await getAllTeamMembers();
-  // console.log({ teamName, fileName, manager, allTeamMembers });
 
   // generated HTML file
-  const newHtmlPage = generateHtml({
-    fileName,
-    allTeamMembers,
-    manager,
-    teamName,
-  });
+  const generatedHTML = generateHtml(teamName, manager, allTeamMembers);
 
-  // HTML file rendered
-  writeToFile(newHtmlPage, fileName);
-  console.log("Your html file has been created successfully");
+  writeToFile(fileName, generatedHTML);
 };
 init();
