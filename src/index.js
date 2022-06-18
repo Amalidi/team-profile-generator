@@ -43,7 +43,7 @@ const managerQuestions = [
     message: "Please enter the manager's email.",
   },
   {
-    name: "officeNum",
+    name: "officeNumber",
     type: "input",
     message: "Please enter the manager's Office Number.",
   },
@@ -132,8 +132,8 @@ const getAllTeamMembers = async () => {
     // using if statement
     if (employeeType === "engineer") {
       // start the engineer question
-      const CreateEngineer = await getAnswers(engineerQuestions);
-      const engineer = new Engineer(CreateEngineer);
+      const createEngineer = await getAnswers(engineerQuestions);
+      const engineer = new Engineer(createEngineer);
       // save it in an array
       teamMembers.push(engineer);
 
@@ -156,8 +156,9 @@ const init = async () => {
   const { teamName, fileName } = await getAnswers(teamQuestions);
 
   // start the manager questions
-  const CreateManger = await getAnswers(managerQuestions);
-  const manager = new Manager(CreateManger);
+  const createManger = await getAnswers(managerQuestions);
+  const manager = new Manager(createManger);
+  console.log(manager);
 
   const allTeamMembers = await getAllTeamMembers();
 

@@ -6,7 +6,7 @@ describe("Employee", () => {
   const email = "A.idi12@outlook.com";
   const role = "Employee";
 
-  const testEmployee = new Employee(name, id, email);
+  const testEmployee = new Employee({ name, id, email });
 
   it("should return the expected email", () => {
     expect(testEmployee.getEmail()).toEqual(email);

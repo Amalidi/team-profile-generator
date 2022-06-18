@@ -7,7 +7,7 @@ describe("Intern", () => {
   const school = "University of Birmingham";
   const role = "Intern";
 
-  const testIntern = new Intern(name, id, email, school);
+  const testIntern = new Intern({ name, id, email, school });
 
   it("should return the expected id", () => {
     expect(testIntern.getId()).toEqual(id);

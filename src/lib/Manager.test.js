@@ -7,7 +7,7 @@ describe("Manager", () => {
   const officeNumber = "76878";
   const role = "Manager";
 
-  const testManager = new Manager(name, id, email, officeNumber);
+  const testManager = new Manager({ name, id, email, officeNumber });
 
   it("Should return correct office number", () => {
     expect(testManager.officeNumber).toEqual(officeNumber);
