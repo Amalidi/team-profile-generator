@@ -158,7 +158,6 @@ const init = async () => {
   // start the manager questions
   const createManger = await getAnswers(managerQuestions);
   const manager = new Manager(createManger);
-  console.log(manager);
 
   const allTeamMembers = await getAllTeamMembers();
 

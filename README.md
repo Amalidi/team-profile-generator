@@ -46,7 +46,7 @@ npm run test
 
 ## Walkthrough
 
-Please click [here]() to view the demo of the application.
+Please click [here](https://drive.google.com/file/d/1LeHlXGdbLfBY6FjQFUO4VnDbteqp2ns2/view) to view the demo of the application.
 
 ## Screenshots
 

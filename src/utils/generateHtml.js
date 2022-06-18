@@ -103,12 +103,12 @@ const generateHtml = (teamName, manager, allTeamMembers) => {
     if (allTeamMembers instanceof Intern) {
       return generateInternCard(allTeamMembers);
     }
+
     if (allTeamMembers instanceof Engineer) {
       return generateEngineerCard(allTeamMembers);
     }
   };
   const teamCards = allTeamMembers.map(generateCard);
-
   const teamCardsGenerated = managerCard + teamCards.join("");
 
   return `
