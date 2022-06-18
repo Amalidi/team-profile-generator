@@ -48,6 +48,8 @@ npm run test
 
 Please click [here](https://drive.google.com/file/d/1LeHlXGdbLfBY6FjQFUO4VnDbteqp2ns2/view) to view the demo of the application.
 
+Checkout the sample HTML template which was created using the terminal["sample.html"](./dist/sample.html)
+
 ## Screenshots
 
 ### An Image of the project:
