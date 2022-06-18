@@ -52,7 +52,7 @@ Please click [here]() to view the demo of the application.
 
 ### An Image of the project:
 
-![Image of the project](./dist/assets/images/htmlimage.png)
+![Image of the project](./dist/assets/images/projectImage.png)
 
 ### An Image of the tests:
 
